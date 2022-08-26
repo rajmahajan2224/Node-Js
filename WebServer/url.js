@@ -1,6 +1,9 @@
 const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
+const data = fs.readFileSync(`${__dirname}/Simpleapi/Userapi.json`, "utf-8");
+const objData = JSON.parse(data);
   // console.log(req.url);
   if(req.url == "/") {
     res.end("Welcome to home page");
@@ -10,6 +13,10 @@ const server = http.createServer((req, res) => {
   }
   else if(req.url == "/contact") {
     res.end("Welcome to contact page");
+  }
+  else if(req.url == "/userAPI") {
+      res.writeHead(200, {"content-type": "application/json"});
+      res.end(objData);
   }
   else {
     res.writeHead(404, {"content-type": "text/html"});
