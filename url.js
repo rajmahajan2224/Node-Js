@@ -15,7 +15,7 @@ const objData = JSON.parse(data);
     res.end("Welcome to contact page");
   }
   else if(req.url == "/userAPI") {
-      console.log(data);
+      res.writeHead(200, {"content-type": "application/json"});
       res.end(objData);
   }
   else {
