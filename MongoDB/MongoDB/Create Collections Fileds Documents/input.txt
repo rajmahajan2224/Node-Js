@@ -1,0 +1,26 @@
+// See Database Present
+
+Command -----> show dbs
+
+// Create Database
+
+Command -----> use DataBase Name
+
+// Create Collections, Fields, and Documents
+
+Command -----> db.collectionName.insertOne(How Many fields to add)
+
+// To See Currently Active DataBase
+
+Command -----> db
+
+// See Collections
+
+Command -----> show Collections
+
+// To see how many data present in our Collections
+
+Command -----> db.collectionName.find()
+
+
+
