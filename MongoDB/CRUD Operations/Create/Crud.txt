@@ -1,0 +1,8 @@
+// Insert Or Create Documents
+
+InsertOne() ------> Means Only one data needs to be insertOne
+InsertMany() -----> Means Many data needs to be insert it will insert data in the form 
+of array of objects.
+
+commands ------> db.collectionName.insertOne({})
+db.collectionName.insertMany([{}, {}, {}])
