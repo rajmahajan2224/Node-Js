@@ -1,0 +1,28 @@
+// Read Query Operations
+
+Commands -----> db.collectionName.find(query, projection)
+Projection Means -----> What to show and what to not show
+
+(i) Find all the result of given collection?
+---> db.rajdata.find()
+
+(ii) Show the result in pretty format?
+---> db.rajdata.find().pretty()
+
+(iii) Get Only MongoDB as Output?
+---> db.rajdata.find({name:"MongoDB"})
+
+(iv) Get Only MongoDB as output with only name field?
+---> db.rajdata.find({name: "MongoDB"}, {name: 1}) 
+
+(v) Get the MongoDB data without ID fild?
+---> db.rajdata.find({name: "MongoDB"}, {_id: 0, name: 1})
+
+(vi) Set the filter to active:true and get only the first field with active:true value?
+---> db.rajdata.find({active:true}).limit(1)
+
+(vii) Do same as 6th Question but with different Method?
+---> db.rajdata.findOne({active:true})
+
+(viii) Do same as the 6th Question but these time get the 2nd field with active:true by skipping the first field?
+---> db.rajdata.find({active:true}).limit(1).skip(1)
