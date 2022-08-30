@@ -1,0 +1,12 @@
+// Update Quering Operations
+
+Command ----> 
+updateOne() -----> db.collectionsName.updateOne(<filter>, <update>)
+updateMany() -----> db.collectionsName.updateMany(<filter>, <update>)
+
+(i) Update the JavaScript type value to "FullStack"?
+----> db.rajdata.updateOne({name:"JavaScript"}, {$set: {type:"FullStack"}})
+$set ---> The $set operator replaces the values of a filed with specified value
+
+(ii) Update all the fields with the type equals to frontend and set the status of type to false?
+---> db.rajdata.updateMany({type:"Front End"}, {$set: {active:False}})
