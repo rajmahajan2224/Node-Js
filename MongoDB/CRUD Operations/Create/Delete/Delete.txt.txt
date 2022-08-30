@@ -1,0 +1,9 @@
+// Delete Quering Operations
+
+Commands ---->
+db.collectionName.deleteMany(Deleteion_Criteria)
+
+(i) Delete the field with the type Matches to FullStack?
+---> db.rajdata.deleteMany({type:"FullStack"})
+
+---> db.rajdata.deleteMany({}) ---> Deletes all the data present inside a collections
